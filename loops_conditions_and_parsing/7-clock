@@ -17,4 +17,4 @@ do
 	((h++))
 	echo "Hour: $((h))";
 	m=1
-done
+done | sed '$d'
