@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 # This script is displaying the content of the current directory in a list format. Only the first part of the name is displaying
 
-ls > list
+i=1
 
-for _ in 'list';
+for _ in $i;
 do
-	cat list;
-	cut -d "/" -f 2;
-	tr "	" "\n";
+	find . -name "[!.]*" | cut -d "/" -f 2 | cut -d "-" -f 2;
 done
