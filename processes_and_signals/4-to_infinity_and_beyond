@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is displaying "To infinity and beyond" indefinitely. In between each iteration of the loop, the scripts adds sleep 2
+
+i=10
+
+while ((i > 1)) 
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
