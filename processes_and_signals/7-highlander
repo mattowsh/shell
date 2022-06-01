@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying a eternal loop saying "To infinity and beyond" until SIGTERM appears. In that case, the script will say "I am invinvible!"
+
+# Set trap for SIGTERM signal
+trap "echo I am invincible!!!" SIGTERM
+
+# Eternat loop until SIGTERM signal appears
+i=10
+
+while ((i > 1))
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
