@@ -4,8 +4,11 @@
 # Creates the file /var/run/myscript.pid containing its PID
 touch /var/run/myscript.pid ; echo $$ > /var/run/myscript.pid
 
-# Displays I hate the kill command when receiving a SIGTERM signal
+# Displays I hate the kill command when receiving a SIGTERM signal. Also, delete the file /var/run/myscript.pid and terminates itself
 trap "echo I hate the kill command; rm /var/run/myscript.pid; pkill -9 -f '10-process_and_pid_file' " SIGTERM 
+
+# Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT signal
+trap "rm /var/run/myscript.pid; pkill -9 -f '10-process_and_pid_file' " SIGQUIT
 
 # Displays Y U no love me?! when receiving a SIGINT signal
 trap "echo Y U no love me?" SIGINT
@@ -19,7 +22,5 @@ do
 	echo "To infinity and beyond"
 	sleep 2
 done
-
-# Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
 
 
