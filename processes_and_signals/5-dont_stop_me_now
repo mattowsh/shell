@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script stops the display of "To infinity and beyond" with kill command
 
-kill -15 $(pidof bash)
+kill -15 -1
