@@ -5,7 +5,7 @@ if [ -n "$1" ]
 then	
 	if [ "$1" == 'start' ]	# Argument = START
 	then
-		./manage_my_process
+		./manage_my_process &
 		touch /var/run/my_process.pid ; echo $$ > /var/run/my_process.pid
 		echo 'manage_my_process started'
 
@@ -19,7 +19,7 @@ then
 	then
 		pkill -15 -f 'manage_my_process'
 		rm /var/run/my_process.pid
-		./manage_my_process
+		./manage_my_process &
 		touch /var/run/my_process.pid ; echo $$ > /var/run/my_process.pid
 		echo 'manage_my_process restarted'
 	
