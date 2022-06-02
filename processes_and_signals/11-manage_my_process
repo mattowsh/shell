@@ -6,19 +6,21 @@ then
 	if [ "$1" == 'start' ]	# Argument = START
 	then
 		./manage_my_process &
-		echo $$ > /var/run/my_process.pid &
+		echo "$!" > /var/run/my_process.pid &
 		echo manage_my_process started
 
 	elif [ "$1" == 'stop' ]	# Argument = STOP
 	then
 		echo manage_my_process stopped &
-		pkill -f 'manage_my_process' & rm /var/run/my_process.pid 
+		pkill -f 'manage_my_process' & 
+		rm /var/run/my_process.pid 
 
 	elif [ "$1" == 'restart' ]	# Argument = RESTART
 	then
-		pkill -f 'manage_my_process' & rm /var/run/my_process.pid &
+		pkill -f 'manage_my_process' & 
+		rm /var/run/my_process.pid &
 		./manage_my_process &
-		echo $$ > /var/run/my_process.pid &
+		echo "$!" > /var/run/my_process.pid &
 		echo manage_my_process restarted 
 	
 	else
