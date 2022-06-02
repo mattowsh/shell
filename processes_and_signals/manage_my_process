@@ -1,0 +1,10 @@
+# Eternat loop echo "I am alive!", saving the data on /tmp/my_process
+touch /tmp/my_process;
+
+i=10
+
+while ((i > 1))
+do 
+	echo 'I am alive!' > /tmp/my_process
+	sleep 2
+done
