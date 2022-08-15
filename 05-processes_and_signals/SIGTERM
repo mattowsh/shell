@@ -1,0 +1,1 @@
+pkill -15 -f "10-process_and_pid_file"

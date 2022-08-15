@@ -1,0 +1,1 @@
+#!/bin/bash                                                                                                N1=echo $((2#$WATER2)) ; N2=echo $((2#$STIR2)) ; SUM= $((N1+N2)) ; echo $SUM
