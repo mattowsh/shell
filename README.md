@@ -9,5 +9,6 @@
 - **Processes and signals**
 
 <a> <img src="https://apply.holbertonschool.com/holberton-logo.png" alt="Holberton logo" width=25% heigth=25% ></img></a>
+
 Montevideo, Uruguay 2022
 
