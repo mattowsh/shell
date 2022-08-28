@@ -1,4 +1,4 @@
-# <a> <img src="https://automatedprogrammer.sh/wp-content/uploads/2018/05/cropped-Linux-Shell.png" alt="Shell Linux" width=7% heigth=7% ></img></a> Linux: Shell-script
+# <a> <img src="https://automatedprogrammer.sh/wp-content/uploads/2018/05/cropped-Linux-Shell.png" alt="Shell Linux" width=5% heigth=5% ></img></a> Linux: Shell-script
 
 ## Curriculum
 - **Basics** : General info; what is the Shell; navigation info; commands ls, less, file; manipulating files; working with commands; man pages; keyboard shortcuts for Bash
